@@ -1,0 +1,61 @@
+site_name: Virtual Science Forum
+repo_url: https://github.com/virtualscienceforum/virtualscienceforum/
+repo_name: source
+docs_dir: src
+edit_uri: ""
+site_description: |
+  A platform for scientific conferences going fully digital
+nav:
+  - Home: index.md
+  - Current and planned events:
+    - Long Range Colloquium: long_range_colloquium.md
+    - Speakers' Corner: speakers-corner.md
+  - Call for organizers: announcement.md
+  - Organizer Guide: organizerguide.md
+  - Speaker Guide: speakerguide.md
+  - Moderator Guide: moderatorguide.md
+  - Attendee Guide: attendeeguide.md
+  - Contact us: contact.md
+  - Contributors: whoweare.md
+  - Privacy policy: privacy_policy.md
+  - Past events:
+    - "Workshop: Quantum Oscillations in insulators": quantum-oscillations-insulators.md
+    - Long Range Colloquium 2020: long_range_colloquium-2020.md
+    - Quantum transport workshop: quantum-transport-workshop.md
+    - Observing Anyons 2020: Observing_Anyons_2020.md
+    - Scanning probe microscopy workshop: SPM_workshop.md
+    - Inaugural session: inauguralsession.md
+
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+  palette:
+    primary: 'white'
+    accent: 'indigo'
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - toc:
+      permalink: True
+  - pymdownx.tabbed
+  - admonition
+  - pymdownx.details
+  - attr_list
+
+plugins:
+  - search
+  - macros:
+      include_yaml:
+        - talks: talks.yml
+      module_name: macros
+
+extra_javascript:
+  - scripts/mathjax_config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/dayjs@1.8.21/dayjs.min.js
+  - https://unpkg.com/dayjs@1.8.21/plugin/utc.js
+  - scripts/render_time.js
